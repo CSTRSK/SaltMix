@@ -20,7 +20,7 @@ Classic mixnets solve the core problem of unlinkability between sender and recei
 
 ## 2. Architecture Overview
 
-![SaltMix packet flow through layered mix nodes](diagram.svg)
+![SaltMix packet flow through layered mix nodes](saltmix_packet_flow.svg)
 
 The client performs local, diversity-constrained path selection using the node list published by the directory authority, then constructs a Sphinx packet with per-hop salting. Each mix node applies one additional defense layer (salting + delay, cover traffic, SURB handling) before the message reaches its destination.
 
