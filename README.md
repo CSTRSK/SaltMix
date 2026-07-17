@@ -1,5 +1,5 @@
 <p align="center">
-  <img src="logo.svg" width="140" height="140" alt="SaltMix logo">
+  <img src="saltmix_logo.svg" width="140" height="140" alt="SaltMix logo">
 </p>
 
 # SaltMix — A Layered-Security Mixnet Concept
