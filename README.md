@@ -168,4 +168,9 @@ Contributions, critiques, and threat-model reviews are welcome via issues/PRs.
 
 ## 9. License
 
-MIT License — Copyright (c) 2026 CSTRSK. See [LICENSE](LICENSE) for details.
+## 9. License
+
+GNU Affero General Public License v3.0 (AGPL-3.0) — Copyright (C) 2026 CSTRSK. See [LICENSE](LICENSE) for details.
+
+AGPL-3.0 was chosen deliberately over a permissive license: it's a copyleft license that also covers network use — anyone who runs a modified version of SaltMix as a public service must make their modified source available to users of that service, not just to people they distribute binaries to. This closes the "SaaS loophole" that permissive and even standard GPL licenses leave open, which matters for network infrastructure like a mixnet where the whole point is trust in what's actually running.
+
