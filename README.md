@@ -1,3 +1,7 @@
+<p align="center">
+  <img src="logo.svg" width="140" height="140" alt="SaltMix logo">
+</p>
+
 # SaltMix — A Layered-Security Mixnet Concept
 
 > **Status:** Proof of Concept / Design Document
