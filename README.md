@@ -20,20 +20,9 @@ Classic mixnets solve the core problem of unlinkability between sender and recei
 
 ## 2. Architecture Overview
 
-```
-Client
-  │
-  │  1. Path selection (local, randomized, diversity-constrained)
-  │  2. Sphinx packet construction with per-hop salt
-  │  3. Fragment + multi-path split (optional)
-  ▼
-┌─────────┐     ┌─────────┐     ┌─────────┐
-│ Mix Node │ ──▶ │ Mix Node │ ──▶ │ Mix Node │ ──▶  Destination
-│ Layer 1  │     │ Layer 2  │     │ Layer 3  │
-└─────────┘     └─────────┘     └─────────┘
-  Poisson         Cover           SURB
-  delay           traffic         reply path
-```
+![SaltMix packet flow through layered mix nodes](diagram.svg)
+
+The client performs local, diversity-constrained path selection using the node list published by the directory authority, then constructs a Sphinx packet with per-hop salting. Each mix node applies one additional defense layer (salting + delay, cover traffic, SURB handling) before the message reaches its destination.
 
 Each node only ever learns:
 - The address of the previous hop
@@ -176,3 +165,7 @@ Contributions, critiques, and threat-model reviews are welcome via issues/PRs.
 - Piotrowska et al., *The Loopix Anonymity System*
 - Nym Technologies, *Nym Network Whitepaper*
 - Chaum, *Untraceable Electronic Mail, Return Addresses, and Digital Pseudonyms*
+
+## 9. License
+
+MIT License — Copyright (c) 2026 CSTRSK. See [LICENSE](LICENSE) for details.
