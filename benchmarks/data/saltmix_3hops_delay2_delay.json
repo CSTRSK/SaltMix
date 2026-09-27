@@ -1,0 +1,34 @@
+{
+ "pro_hop": {
+  "hop0": {
+   "rein": 320,
+   "raus": 320,
+   "replay": 0,
+   "fehler": 0,
+   "delay_summe": 647.4295,
+   "delay_anzahl": 320,
+   "delay_mittel": 2.0232
+  },
+  "hop1": {
+   "rein": 320,
+   "raus": 320,
+   "replay": 0,
+   "fehler": 0,
+   "delay_summe": 649.2567,
+   "delay_anzahl": 320,
+   "delay_mittel": 2.0289
+  },
+  "hop2": {
+   "rein": 320,
+   "raus": 319,
+   "replay": 0,
+   "fehler": 0,
+   "delay_summe": 642.4184,
+   "delay_anzahl": 320,
+   "delay_mittel": 2.0076
+  }
+ },
+ "delay_summe_s": 1939.105,
+ "delay_anzahl": 960,
+ "delay_mittel_s": 2.0199
+}

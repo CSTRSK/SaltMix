@@ -1,0 +1,28 @@
+{
+ "hops": 3,
+ "pro_hop": {
+  "hop0": {
+   "cpu_sekunden": 0.19,
+   "cpu_prozent_einer_kernstunde": 0.37,
+   "rss_mittel_mb": 24.1,
+   "rss_max_mb": 24.3
+  },
+  "hop1": {
+   "cpu_sekunden": 0.17,
+   "cpu_prozent_einer_kernstunde": 0.33,
+   "rss_mittel_mb": 24.2,
+   "rss_max_mb": 24.3
+  },
+  "hop2": {
+   "cpu_sekunden": 0.15,
+   "cpu_prozent_einer_kernstunde": 0.29,
+   "rss_mittel_mb": 24.4,
+   "rss_max_mb": 24.4
+  }
+ },
+ "summe": {
+  "cpu_prozent_einer_kernstunde": 0.99,
+  "rss_summe_mittel_mb": 72.7,
+  "rss_summe_max_mb": 73.0
+ }
+}

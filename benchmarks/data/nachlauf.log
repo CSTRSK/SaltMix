@@ -1,0 +1,216 @@
+[23:26:54] Hintergrundlast: 0.56 0.98 2.08 1/230 1097478
+[23:26:54] --- A) SaltMix 3 Hops, Mix-Delay 1 ms statt 0 (ZeroDivisionError umgangen) ---
+== SaltMix saltmix_3hops_1ms: 3 Hops, mean_delay=0.001s, 300 Nachrichten @ 20/s, 256 Byte ==
+Ressourcen -> ./benchmarks/data/saltmix_3hops_1ms_ressourcen.json: {"cpu_prozent_einer_kernstunde": 1.3, "rss_summe_mittel_mb": 72.3, "rss_summe_max_mb": 73.2}
+Mix-Delay -> ./benchmarks/data/saltmix_3hops_1ms_delay.json: Summe 0.9s ueber 960 gezogene Verzoegerungen
+== saltmix_3hops_1ms fertig: ./benchmarks/data/saltmix_3hops_1ms_{sink,client}.jsonl + _ressourcen.json + _delay.json ==
+{"msg_id": 0, "t": 1790551624.6185358, "paket_bytes": 412}
+{"msg_id": 1, "t": 1790551624.6689444, "paket_bytes": 412}
+saltmix_3hops_1ms                        {"nachrichten_empfangen": 300, "nachrichten_gesendet": 300, "verlust_prozent": 0.0, "median_s": 0.0058, "mittel_s": 0.0062, "p95_s": 0.0094, "p99_s": 0.0107, "min_s": 0.0034, "max_s": 0.0118, "sende_dauer_s": 14.951, "durchsatz_nachrichten_pro_s": 20.07}
+[23:27:35] --- B) Tor oeffentlich mit repariertem Parser + Direktvergleich ---
+== warte auf Tor-Bootstrap ==
+Sep 27 23:24:29.000 [notice] Bootstrapped 100% (done): Done
+== Ressourcen-Sampling startet ==
+== Direktvergleich (ohne Tor) ==
+./benchmarks/data/direkt_extern.jsonl: 300 Anfragen in 15.00s (20.0/s), erste 5.3 ms, letzte 3.8 ms
+== Tor (oeffentlich, 3 Hops) ==
+./benchmarks/data/tor_public.jsonl: 300 Anfragen in 35.28s (8.5/s), erste 89.8 ms, letzte 88.5 ms
+== Tor-public fertig ==
+direkt_extern.jsonl                      {"nachrichten_empfangen": 300, "nachrichten_gesendet": 300, "verlust_prozent": 0.0, "median_s": 0.0041, "mittel_s": 0.0043, "p95_s": 0.0053, "p99_s": 0.0064, "min_s": 0.0036, "max_s": 0.0284, "sende_dauer_s": 14.949, "durchsatz_nachrichten_pro_s": 20.07}
+tor_public.jsonl                         {"nachrichten_empfangen": 300, "nachrichten_gesendet": 300, "verlust_prozent": 0.0, "median_s": 0.0978, "mittel_s": 0.1175, "p95_s": 0.1814, "p99_s": 0.2867, "min_s": 0.0873, "max_s": 0.4629, "sende_dauer_s": 35.186, "durchsatz_nachrichten_pro_s": 8.53}
+[23:28:28] --- C) chutney: erst configure, dann start (ein Versuch) ---
+
+Launching chutney using Python 3.11.15
+../chutney/lib/chutney/TorNet.py:17: DeprecationWarning: 'cgitb' is deprecated and slated for removal in Python 3.13
+  import cgitb
+NOTE: creating '../chutney/net/nodes.1790551709', linking to '../chutney/net/nodes'
+Creating identity key for test000a     with tor-gencert
+Creating identity key for test001a     with tor-gencert
+Creating identity key for test002a     with tor-gencert
+[23:28:31]   configure fertig, Knoten: 11
+
+Launching chutney using Python 3.11.15
+../chutney/lib/chutney/TorNet.py:17: DeprecationWarning: 'cgitb' is deprecated and slated for removal in Python 3.13
+  import cgitb
+Starting nodes
+
+Launching chutney using Python 3.11.15
+../chutney/lib/chutney/TorNet.py:17: DeprecationWarning: 'cgitb' is deprecated and slated for removal in Python 3.13
+  import cgitb
+Waiting for nodes to bootstrap...
+
+Bootstrap in progress: 10 seconds
+Node status:
+test000a     :    0, starting                 , Starting
+test001a     :    0, starting                 , Starting
+test002a     :    0, starting                 , Starting
+test003r     :    0, starting                 , Starting
+test004r     :    0, starting                 , Starting
+test005r     :    0, starting                 , Starting
+test006r     :    0, starting                 , Starting
+test007r     :    0, starting                 , Starting
+test008c     :   30, loading_status           , Loading networkstatus consensus
+test009c     :   30, loading_status           , Loading networkstatus consensus
+Published dir info:
+test000a     : -400, caches and clients       , all formats                   , No dir file
+test001a     : -400, caches and clients       , all formats                   , No dir file
+test002a     : -400, caches and clients       , all formats                   , No dir file
+test003r     : -400, caches and clients       , all formats                   , No dir file
+test004r     : -400, caches and clients       , all formats                   , No dir file
+test005r     : -400, caches and clients       , all formats                   , No dir file
+test006r     : -400, caches and clients       , all formats                   , No dir file
+test007r     : -400, caches and clients       , all formats                   , No dir file
+
+Bootstrap in progress: 20 seconds
+Node status:
+test000a     :    0, starting                 , Starting
+test001a     :    0, starting                 , Starting
+test002a     :    0, starting                 , Starting
+test003r     :    0, starting                 , Starting
+test004r     :    0, starting                 , Starting
+test005r     :    0, starting                 , Starting
+test006r     :    0, starting                 , Starting
+test007r     :    0, starting                 , Starting
+test008c     :   30, loading_status           , Loading networkstatus consensus
+test009c     :   30, loading_status           , Loading networkstatus consensus
+Published dir info:
+test000a     : -400, caches and clients       , all formats                   , No dir file
+test001a     : -400, caches and clients       , all formats                   , No dir file
+test002a     : -400, caches and clients       , all formats                   , No dir file
+test003r     : -400, caches and clients       , all formats                   , No dir file
+test004r     : -400, caches and clients       , all formats                   , No dir file
+test005r     : -400, caches and clients       , all formats                   , No dir file
+test006r     : -400, caches and clients       , all formats                   , No dir file
+test007r     : -400, caches and clients       , all formats                   , No dir file
+
+Bootstrap in progress: 30 seconds
+Node status:
+test000a     :    0, starting                 , Starting
+test001a     :    0, starting                 , Starting
+test002a     :    0, starting                 , Starting
+test003r     :   95, circuit_create           , Establishing a Tor circuit
+test004r     :   95, circuit_create           , Establishing a Tor circuit
+test005r     :    0, starting                 , Starting
+test006r     :    0, starting                 , Starting
+test007r     :    0, starting                 , Starting
+test008c     :   30, loading_status           , Loading networkstatus consensus
+test009c     :   30, loading_status           , Loading networkstatus consensus
+Published dir info:
+test000a     : -400, caches and clients       , all formats                   , No dir file
+test001a     : -400, caches and clients       , all formats                   , No dir file
+test002a     : -400, caches and clients       , all formats                   , No dir file
+test003r     : -400, caches and clients       , all formats                   , No dir file
+test004r     : -400, caches and clients       , all formats                   , No dir file
+test005r     : -400, caches and clients       , all formats                   , No dir file
+test006r     : -400, caches and clients       , all formats                   , No dir file
+test007r     : -400, caches and clients       , all formats                   , No dir file
+
+Bootstrap in progress: 41 seconds
+Node status:
+test000a     :    0, starting                 , Starting
+test001a     :    0, starting                 , Starting
+test002a     :    0, starting                 , Starting
+test003r     :   95, circuit_create           , Establishing a Tor circuit
+test004r     :   95, circuit_create           , Establishing a Tor circuit
+test005r     :    0, starting                 , Starting
+test006r     :   95, circuit_create           , Establishing a Tor circuit
+test007r     :    0, starting                 , Starting
+test008c     :   95, circuit_create           , Establishing a Tor circuit
+test009c     :   95, circuit_create           , Establishing a Tor circuit
+Published dir info:
+test000a     : -400, 003r 005r 006r 007r      , all formats                   , No dir file
+test001a     : -400, 003r 005r 006r 007r      , all formats                   , No dir file
+test002a     : -400, 003r 005r 006r 007r      , all formats                   , No dir file
+test003r     : -400, 003r 005r 006r 007r      , all formats                   , No dir file
+test004r     : -400, 003r 005r 006r 007r      , all formats                   , No dir file
+test005r     : -400, 003r 005r 006r 007r      , all formats                   , No dir file
+test006r     : -400, 003r 005r 006r 007r      , all formats                   , No dir file
+test007r     : -400, 003r 005r 006r 007r      , all formats                   , No dir file
+
+Bootstrap in progress: 51 seconds
+Node status:
+test000a     :    0, starting                 , Starting
+test001a     :    0, starting                 , Starting
+test002a     :    0, starting                 , Starting
+test003r     :   95, circuit_create           , Establishing a Tor circuit
+test004r     :   95, circuit_create           , Establishing a Tor circuit
+test005r     :   95, circuit_create           , Establishing a Tor circuit
+test006r     :   95, circuit_create           , Establishing a Tor circuit
+test007r     :    0, starting                 , Starting
+test008c     :   95, circuit_create           , Establishing a Tor circuit
+test009c     :   95, circuit_create           , Establishing a Tor circuit
+Published dir info:
+test000a     : -400, 003r 007r                , all formats                   , No dir file
+test001a     : -400, 003r 007r                , all formats                   , No dir file
+test002a     : -400, 003r 007r                , all formats                   , No dir file
+test003r     : -400, 003r 007r                , all formats                   , No dir file
+test004r     : -400, 003r 007r                , all formats                   , No dir file
+test005r     : -400, 003r 007r                , all formats                   , No dir file
+test006r     : -400, 003r 007r                , all formats                   , No dir file
+test007r     : -400, 003r 007r                , all formats                   , No dir file
+
+Bootstrap failed: 60 seconds
+Node status:
+test000a     :    0, starting                 , Starting
+test001a     :    0, starting                 , Starting
+test002a     :    0, starting                 , Starting
+test003r     :   95, circuit_create           , Establishing a Tor circuit
+test004r     :   95, circuit_create           , Establishing a Tor circuit
+test005r     :   95, circuit_create           , Establishing a Tor circuit
+test006r     :   95, circuit_create           , Establishing a Tor circuit
+test007r     :    0, starting                 , Starting
+test008c     :   95, circuit_create           , Establishing a Tor circuit
+test009c     :   95, circuit_create           , Establishing a Tor circuit
+Published dir info:
+test000a     : -400, 007r                     , all formats                   , No dir file
+test001a     : -400, 007r                     , all formats                   , No dir file
+test002a     : -400, 007r                     , all formats                   , No dir file
+test003r     : -400, 007r                     , all formats                   , No dir file
+test004r     : -400, 007r                     , all formats                   , No dir file
+test005r     : -400, 007r                     , all formats                   , No dir file
+test006r     : -400, 007r                     , all formats                   , No dir file
+test007r     : -400, 007r                     , all formats                   , No dir file
+
+[23:29:33]   KEIN chutney-Client -> Tor-Chutney nicht messbar, Grund im Log
+[23:29:33] --- D) Nym: korrekte Flag-Reihenfolge ---
+== Sandbox-Umgebung holen ==
+CONFIGURED=true
+
+RUST_LOG=info
+RUST_BACKTRACE=1
+NETWORK_NAME=sandbox
+BECH32_PREFIX=n
+== Netzwerk-Requester in der Sandbox suchen ==
+  Requester-Kandidat: (52, 'sandbox-nym-node-0.le.nymte.ch', '33g9yMQea4S1arwWBUC3jHoQMWEXcStrsnDxmK5Dmsob')
+  Requester-Kandidat: (95, 'sandbox-nym-node-3.le.nymte.ch', 'Gejc2CnSRFUxK6519ewmWM66ytDZbbuXytwLUgytCQUD')
+  Requester-Kandidat: (106, 'sandbox-nym-node-2.le.nymte.ch', '6imWS1yMngEeV3jCys4r7CDC5N2HC9yoXvA2ytqDfrWC')
+  Requester-Kandidat: (96, 'sandbox-nym-node-4.le.nymte.ch', 'Bzcqjowuwut3855etsaHpeiFaeFQpfDjzpviBnbLrRC7')
+  Requester-Kandidat: (13, 'sandbox-mixnode-0.le.nymte.ch', 'DPeVeWktV4eYrwwTZ33fs1718DbfR3wgxfFTjVwwBe4Y')
+  gefunden: 10
+== Nym-SOCKS5-Client starten (Requester 33g9yMQea4S1arwWBUC3jHoQMWEXcStrsnDxmK5Dmsob) ==
+error: unexpected argument '--config-env-file' found
+
+Usage: nym-socks5-client init --id <ID> --provider <PROVIDER>
+
+For more information, try '--help'.
+  SOCKS5-Port: 1080
+== Messung durch das Nym-Mixnetz (erwartet: Sekunden durch Mix-Delays) ==
+Traceback (most recent call last):
+  File "./benchmarks/harness/messe.py", line 152, in <module>
+    main()
+  File "./benchmarks/harness/messe.py", line 119, in main
+    s = verbinde()
+        ^^^^^^^^^^
+  File "./benchmarks/harness/messe.py", line 115, in verbinde
+    return socks5_verbinden((sh, int(sp)), ziel)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "./benchmarks/harness/messe.py", line 27, in socks5_verbinden
+    s = socket.create_connection(socks, timeout=30)
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/share/uv/python/cpython-3.11.15-linux-x86_64-gnu/lib/python3.11/socket.py", line 863, in create_connection
+    raise exceptions[0]
+  File "/usr/local/share/uv/python/cpython-3.11.15-linux-x86_64-gnu/lib/python3.11/socket.py", line 848, in create_connection
+    sock.connect(sa)
+ConnectionRefusedError: [Errno 111] Connection refused
+== Nym fertig ==
+[23:29:58] Nachlauf fertig

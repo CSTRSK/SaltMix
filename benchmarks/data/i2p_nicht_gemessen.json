@@ -1,0 +1,5 @@
+{
+ "status": "nicht gemessen",
+ "grund": "I2P-Installer nicht beziehbar (geti2p.net nicht parsebar/erreichbar). Kein I2P-Paket in AlmaLinux 9 (EPEL/RPMfusion geprueft).",
+ "datum": "2026-09-27"
+}
