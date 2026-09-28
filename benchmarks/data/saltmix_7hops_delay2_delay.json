@@ -1,0 +1,70 @@
+{
+ "pro_hop": {
+  "hop0": {
+   "rein": 320,
+   "raus": 320,
+   "replay": 0,
+   "fehler": 0,
+   "delay_summe": 589.0022,
+   "delay_anzahl": 320,
+   "delay_mittel": 1.8406
+  },
+  "hop1": {
+   "rein": 320,
+   "raus": 320,
+   "replay": 0,
+   "fehler": 0,
+   "delay_summe": 666.006,
+   "delay_anzahl": 320,
+   "delay_mittel": 2.0813
+  },
+  "hop2": {
+   "rein": 320,
+   "raus": 320,
+   "replay": 0,
+   "fehler": 0,
+   "delay_summe": 661.4947,
+   "delay_anzahl": 320,
+   "delay_mittel": 2.0672
+  },
+  "hop3": {
+   "rein": 320,
+   "raus": 320,
+   "replay": 0,
+   "fehler": 0,
+   "delay_summe": 638.569,
+   "delay_anzahl": 320,
+   "delay_mittel": 1.9955
+  },
+  "hop4": {
+   "rein": 320,
+   "raus": 320,
+   "replay": 0,
+   "fehler": 0,
+   "delay_summe": 599.8184,
+   "delay_anzahl": 320,
+   "delay_mittel": 1.8744
+  },
+  "hop5": {
+   "rein": 320,
+   "raus": 316,
+   "replay": 0,
+   "fehler": 0,
+   "delay_summe": 644.7318,
+   "delay_anzahl": 320,
+   "delay_mittel": 2.0148
+  },
+  "hop6": {
+   "rein": 316,
+   "raus": 310,
+   "replay": 0,
+   "fehler": 0,
+   "delay_summe": 678.2425,
+   "delay_anzahl": 316,
+   "delay_mittel": 2.1463
+  }
+ },
+ "delay_summe_s": 4477.865,
+ "delay_anzahl": 2236,
+ "delay_mittel_s": 2.0026
+}

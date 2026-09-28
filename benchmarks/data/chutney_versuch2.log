@@ -1,0 +1,19 @@
+
+Launching chutney using Python 3.11.15
+../chutney/lib/chutney/TorNet.py:17: DeprecationWarning: 'cgitb' is deprecated and slated for removal in Python 3.13
+  import cgitb
+NOTE: creating '../chutney/net/nodes.1790551832', linking to '../chutney/net/nodes'
+Creating identity key for test000a     with tor-gencert
+Creating identity key for test001a     with tor-gencert
+Creating identity key for test002a     with tor-gencert
+
+Launching chutney using Python 3.11.15
+../chutney/lib/chutney/TorNet.py:17: DeprecationWarning: 'cgitb' is deprecated and slated for removal in Python 3.13
+  import cgitb
+Starting nodes
+[23:30:33] Netz gestartet, warte 300 s auf Bootstrap
+[23:35:33] Knoten laufen: 10
+  Client-Torrc: keins
+  Verzeichnisse: 000a 001a 002a 003r 004r 005r 006r 007r 008c 009c arti.toml 
+  kein Client-Knoten im Netz -> nicht messbar
+[23:35:33] chutney-Versuch2 fertig

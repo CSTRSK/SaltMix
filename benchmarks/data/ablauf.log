@@ -1,0 +1,108 @@
+[23:21:49] Start Gesamtlauf (je 300 Nachrichten, 20/s)
+[23:21:49] Hintergrundlast zum Start:  23:21:49 up 13 days,  9:10,  0 users,  load average: 0.47, 1.82, 2.70
+Zielserver auf 0.0.0.0:8088 (Antwort 256 Byte)
+[23:21:51] --- 1/6 SaltMix: 3 Hops, Mix-Delay 2,0 s (Standard) ---
+== SaltMix saltmix_3hops_delay2: 3 Hops, mean_delay=2.0s, 300 Nachrichten @ 20/s, 256 Byte ==
+Ressourcen -> ./benchmarks/data/saltmix_3hops_delay2_ressourcen.json: {"cpu_prozent_einer_kernstunde": 0.99, "rss_summe_mittel_mb": 72.7, "rss_summe_max_mb": 73.0}
+Mix-Delay -> ./benchmarks/data/saltmix_3hops_delay2_delay.json: Summe 1939.1s ueber 960 gezogene Verzoegerungen
+== saltmix_3hops_delay2 fertig: ./benchmarks/data/saltmix_3hops_delay2_{sink,client}.jsonl + _ressourcen.json + _delay.json ==
+{"msg_id": 0, "t": 1790551327.9354115, "paket_bytes": 412}
+{"msg_id": 1, "t": 1790551327.9857142, "paket_bytes": 412}
+[23:22:45] --- 2/6 SaltMix: 3 Hops, Mix-Delay 0 s (Delay-Anteil isolieren) ---
+== SaltMix saltmix_3hops_nodelay: 3 Hops, mean_delay=0s, 300 Nachrichten @ 20/s, 256 Byte ==
+Ressourcen -> ./benchmarks/data/saltmix_3hops_nodelay_ressourcen.json: {"cpu_prozent_einer_kernstunde": 0.8, "rss_summe_mittel_mb": 72.6, "rss_summe_max_mb": 73.1}
+Mix-Delay -> ./benchmarks/data/saltmix_3hops_nodelay_delay.json: Summe 0.0s ueber 0 gezogene Verzoegerungen
+== saltmix_3hops_nodelay fertig: ./benchmarks/data/saltmix_3hops_nodelay_{sink,client}.jsonl + _ressourcen.json + _delay.json ==
+{"msg_id": 0, "t": 1790551375.203352, "paket_bytes": 412}
+{"msg_id": 1, "t": 1790551375.2537293, "paket_bytes": 412}
+[23:23:26] --- 3/6 SaltMix: 7 Hops, Mix-Delay 2,0 s (Topologie-Variante) ---
+== SaltMix saltmix_7hops_delay2: 7 Hops, mean_delay=2.0s, 300 Nachrichten @ 20/s, 256 Byte ==
+Ressourcen -> ./benchmarks/data/saltmix_7hops_delay2_ressourcen.json: {"cpu_prozent_einer_kernstunde": 2.11, "rss_summe_mittel_mb": 169.8, "rss_summe_max_mb": 170.8}
+Mix-Delay -> ./benchmarks/data/saltmix_7hops_delay2_delay.json: Summe 4477.9s ueber 2236 gezogene Verzoegerungen
+== saltmix_7hops_delay2 fertig: ./benchmarks/data/saltmix_7hops_delay2_{sink,client}.jsonl + _ressourcen.json + _delay.json ==
+{"msg_id": 0, "t": 1790551430.4627512, "paket_bytes": 604}
+{"msg_id": 1, "t": 1790551430.5132957, "paket_bytes": 604}
+[23:24:27] --- 4/6 Tor: oeffentliches Netz + Direktvergleich ---
+== warte auf Tor-Bootstrap ==
+Sep 27 20:55:29.000 [notice] Bootstrapped 100% (done): Done
+== Ressourcen-Sampling startet ==
+== Direktvergleich (ohne Tor) ==
+./benchmarks/data/direkt_extern.jsonl: 300 Anfragen in 15.00s (20.0/s), erste 0.0 ms, letzte 0.1 ms
+== Tor (oeffentlich, 3 Hops) ==
+./benchmarks/data/tor_public.jsonl: 300 Anfragen in 28.78s (10.4/s), erste 81.4 ms, letzte 46.0 ms
+== Tor-public fertig ==
+[23:25:13] --- 5/6 Tor: chutney-Testnetz (lokal, 3 Hops) ---
+== chutney networks/basic starten (8 Tor-Prozesse, kann 2-4 min dauern) ==
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+FileNotFoundError: [Errno 2] No such file or directory: '../chutney/net/nodes/000a/torrc'
+</pre>
+TypeError: cannot unpack non-iterable NoneType object
+
+
+  kein chutney-Client gefunden
+[23:25:15] --- 6/6 Nym (Sandbox) und I2P (mit Fallback) ---
+== Sandbox-Umgebung holen ==
+CONFIGURED=true
+
+RUST_LOG=info
+RUST_BACKTRACE=1
+NETWORK_NAME=sandbox
+BECH32_PREFIX=n
+== Netzwerk-Requester in der Sandbox suchen ==
+  Requester-Kandidat: (52, 'sandbox-nym-node-0.le.nymte.ch', '33g9yMQea4S1arwWBUC3jHoQMWEXcStrsnDxmK5Dmsob')
+  Requester-Kandidat: (95, 'sandbox-nym-node-3.le.nymte.ch', 'Gejc2CnSRFUxK6519ewmWM66ytDZbbuXytwLUgytCQUD')
+  Requester-Kandidat: (106, 'sandbox-nym-node-2.le.nymte.ch', '6imWS1yMngEeV3jCys4r7CDC5N2HC9yoXvA2ytqDfrWC')
+  Requester-Kandidat: (96, 'sandbox-nym-node-4.le.nymte.ch', 'Bzcqjowuwut3855etsaHpeiFaeFQpfDjzpviBnbLrRC7')
+  Requester-Kandidat: (13, 'sandbox-mixnode-0.le.nymte.ch', 'DPeVeWktV4eYrwwTZ33fs1718DbfR3wgxfFTjVwwBe4Y')
+  gefunden: 10
+== Nym-SOCKS5-Client starten (Requester 33g9yMQea4S1arwWBUC3jHoQMWEXcStrsnDxmK5Dmsob) ==
+error: unexpected argument '--config-env-file' found
+
+Usage: nym-socks5-client init --id <ID> --provider <PROVIDER>
+
+For more information, try '--help'.
+  SOCKS5-Port: 1080
+== Messung durch das Nym-Mixnetz (erwartet: Sekunden durch Mix-Delays) ==
+Traceback (most recent call last):
+  File "./benchmarks/harness/messe.py", line 137, in <module>
+    main()
+  File "./benchmarks/harness/messe.py", line 104, in main
+    s = verbinde()
+        ^^^^^^^^^^
+  File "./benchmarks/harness/messe.py", line 100, in verbinde
+    return socks5_verbinden((sh, int(sp)), ziel)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "./benchmarks/harness/messe.py", line 27, in socks5_verbinden
+    s = socket.create_connection(socks, timeout=30)
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/share/uv/python/cpython-3.11.15-linux-x86_64-gnu/lib/python3.11/socket.py", line 863, in create_connection
+    raise exceptions[0]
+  File "/usr/local/share/uv/python/cpython-3.11.15-linux-x86_64-gnu/lib/python3.11/socket.py", line 848, in create_connection
+    sock.connect(sa)
+ConnectionRefusedError: [Errno 111] Connection refused
+== Nym fertig ==
+== Java pruefen/installieren ==
+
+Complete!
+openjdk version "17.0.20.1" 2026-08-18 LTS
+== I2P-Installer besorgen ==
+  Download-URL nicht gefunden
+[23:25:50] --- Auswertung ---
+saltmix_3hops_delay2                     {"nachrichten_empfangen": 300, "nachrichten_gesendet": 300, "verlust_prozent": 0.0, "median_s": 5.638, "mittel_s": 6.1316, "p95_s": 11.4944, "p99_s": 15.8804, "min_s": 0.558, "max_s": 22.1573, "sende_dauer_s": 14.951, "durchsatz_nachrichten_pro_s": 20.07}
+saltmix_3hops_nodelay                    {"nachrichten_empfangen": 0, "nachrichten_gesendet": 300, "verlust_prozent": 100.0, "median_s": null, "mittel_s": null, "p95_s": null, "p99_s": null, "min_s": null, "max_s": null, "sende_dauer_s": 14.95, "durchsatz_nachrichten_pro_s": 20.07}
+saltmix_7hops_delay2                     {"nachrichten_empfangen": 295, "nachrichten_gesendet": 300, "verlust_prozent": 1.67, "median_s": 13.2245, "mittel_s": 13.8129, "p95_s": 22.7662, "p99_s": 24.7579, "min_s": 3.7001, "max_s": 25.3942, "sende_dauer_s": 14.951, "durchsatz_nachrichten_pro_s": 20.07}
+tor_public.jsonl                         {"nachrichten_empfangen": 300, "nachrichten_gesendet": 300, "verlust_prozent": 0.0, "median_s": 0.0821, "mittel_s": 0.0959, "p95_s": 0.1691, "p99_s": 0.2158, "min_s": 0.0131, "max_s": 0.2454, "sende_dauer_s": 28.694, "durchsatz_nachrichten_pro_s": 10.46}
+direkt_extern.jsonl                      {"nachrichten_empfangen": 300, "nachrichten_gesendet": 300, "verlust_prozent": 0.0, "median_s": 0.0001, "mittel_s": 0.0001, "p95_s": 0.0001, "p99_s": 0.0001, "min_s": 0.0, "max_s": 0.0002, "sende_dauer_s": 14.95, "durchsatz_nachrichten_pro_s": 20.07}
+tor_chutney.jsonl                        {"fehler": "Datei fehlt"}
+direkt_lokal.jsonl                       {"fehler": "Datei fehlt"}
+nym.jsonl                                {"fehler": "Datei fehlt"}
+i2p.jsonl                                {"fehler": "Datei fehlt"}
+-> ./benchmarks/data/latenz_zusammenfassung.json
+Traceback (most recent call last):
+  File "./benchmarks/harness/ressourcen_auswerten.py", line 76, in <module>
+    main()
+  File "./benchmarks/harness/ressourcen_auswerten.py", line 52, in main
+    if not os.path.exists(datei):
+           ^^
+NameError: name 'os' is not defined
+[23:25:50] Fertig. Rohdaten in ./benchmarks/data

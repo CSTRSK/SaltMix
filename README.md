@@ -4,6 +4,8 @@
 
 # SaltMix — A Layered-Security Mixnet Concept
 
+
+**Benchmarks:** Latenz, angebotene Last und Ressourcenverbrauch gegenüber Tor (gemessen am 27.09.2026), mit Fairness-Hinweisen und Rohdaten: [BENCHMARKS.md](BENCHMARKS.md).
 > **Status:** Proof of Concept / Design Document
 > **Goal:** Explore an extended mixnet architecture that stacks additional cryptographic, traffic-analysis, and network-level defenses on top of the classic Chaumian mix model (as used by Nym, Loopix, and similar systems).
 

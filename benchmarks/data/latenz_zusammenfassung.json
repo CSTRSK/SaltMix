@@ -1,0 +1,79 @@
+{
+ "saltmix_3hops_delay2": {
+  "nachrichten_empfangen": 300,
+  "nachrichten_gesendet": 300,
+  "verlust_prozent": 0.0,
+  "median_s": 5.638,
+  "mittel_s": 6.1316,
+  "p95_s": 11.4944,
+  "p99_s": 15.8804,
+  "min_s": 0.558,
+  "max_s": 22.1573,
+  "sende_dauer_s": 14.951,
+  "durchsatz_nachrichten_pro_s": 20.07
+ },
+ "saltmix_3hops_nodelay": {
+  "nachrichten_empfangen": 0,
+  "nachrichten_gesendet": 300,
+  "verlust_prozent": 100.0,
+  "median_s": null,
+  "mittel_s": null,
+  "p95_s": null,
+  "p99_s": null,
+  "min_s": null,
+  "max_s": null,
+  "sende_dauer_s": 14.95,
+  "durchsatz_nachrichten_pro_s": 20.07
+ },
+ "saltmix_7hops_delay2": {
+  "nachrichten_empfangen": 295,
+  "nachrichten_gesendet": 300,
+  "verlust_prozent": 1.67,
+  "median_s": 13.2245,
+  "mittel_s": 13.8129,
+  "p95_s": 22.7662,
+  "p99_s": 24.7579,
+  "min_s": 3.7001,
+  "max_s": 25.3942,
+  "sende_dauer_s": 14.951,
+  "durchsatz_nachrichten_pro_s": 20.07
+ },
+ "tor_public.jsonl": {
+  "nachrichten_empfangen": 300,
+  "nachrichten_gesendet": 300,
+  "verlust_prozent": 0.0,
+  "median_s": 0.0821,
+  "mittel_s": 0.0959,
+  "p95_s": 0.1691,
+  "p99_s": 0.2158,
+  "min_s": 0.0131,
+  "max_s": 0.2454,
+  "sende_dauer_s": 28.694,
+  "durchsatz_nachrichten_pro_s": 10.46
+ },
+ "direkt_extern.jsonl": {
+  "nachrichten_empfangen": 300,
+  "nachrichten_gesendet": 300,
+  "verlust_prozent": 0.0,
+  "median_s": 0.0001,
+  "mittel_s": 0.0001,
+  "p95_s": 0.0001,
+  "p99_s": 0.0001,
+  "min_s": 0.0,
+  "max_s": 0.0002,
+  "sende_dauer_s": 14.95,
+  "durchsatz_nachrichten_pro_s": 20.07
+ },
+ "tor_chutney.jsonl": {
+  "fehler": "Datei fehlt"
+ },
+ "direkt_lokal.jsonl": {
+  "fehler": "Datei fehlt"
+ },
+ "nym.jsonl": {
+  "fehler": "Datei fehlt"
+ },
+ "i2p.jsonl": {
+  "fehler": "Datei fehlt"
+ }
+}

@@ -1,0 +1,52 @@
+{
+ "hops": 7,
+ "pro_hop": {
+  "hop0": {
+   "cpu_sekunden": 0.2,
+   "cpu_prozent_einer_kernstunde": 0.35,
+   "rss_mittel_mb": 24.1,
+   "rss_max_mb": 24.4
+  },
+  "hop1": {
+   "cpu_sekunden": 0.2,
+   "cpu_prozent_einer_kernstunde": 0.35,
+   "rss_mittel_mb": 24.3,
+   "rss_max_mb": 24.5
+  },
+  "hop2": {
+   "cpu_sekunden": 0.2,
+   "cpu_prozent_einer_kernstunde": 0.35,
+   "rss_mittel_mb": 24.2,
+   "rss_max_mb": 24.4
+  },
+  "hop3": {
+   "cpu_sekunden": 0.15,
+   "cpu_prozent_einer_kernstunde": 0.26,
+   "rss_mittel_mb": 24.2,
+   "rss_max_mb": 24.3
+  },
+  "hop4": {
+   "cpu_sekunden": 0.15,
+   "cpu_prozent_einer_kernstunde": 0.26,
+   "rss_mittel_mb": 24.3,
+   "rss_max_mb": 24.4
+  },
+  "hop5": {
+   "cpu_sekunden": 0.16,
+   "cpu_prozent_einer_kernstunde": 0.28,
+   "rss_mittel_mb": 24.4,
+   "rss_max_mb": 24.5
+  },
+  "hop6": {
+   "cpu_sekunden": 0.15,
+   "cpu_prozent_einer_kernstunde": 0.26,
+   "rss_mittel_mb": 24.3,
+   "rss_max_mb": 24.3
+  }
+ },
+ "summe": {
+  "cpu_prozent_einer_kernstunde": 2.11,
+  "rss_summe_mittel_mb": 169.8,
+  "rss_summe_max_mb": 170.8
+ }
+}
